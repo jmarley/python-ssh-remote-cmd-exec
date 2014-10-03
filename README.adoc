@@ -1,0 +1,17 @@
+= Remotely execute list of commands using python 
+
+This is fairly straight forward so I won't go into too much detail. Basically, I needed a nice concise way to execute a slew of the same commands across many servers. I used the paramiko module (which is awesomely easy to use) to accomplish this.
+
+== Basics
+
+hostname::
+The hostname is a list of machines you'd like to connect to, they can be ip or domain name as long as they're resovlable.
+
+user::
+This is a single user, but with slight modification can be list of users and may a multi-dimensionable list (host,user,passwd).
+password::
+Again only takes single password, but can be modified; mentioned above.
+log_path::
+This is the absolute path to where the log file should be placed (locally).
+commands::
+This is a list of commands to be executed on the machines.
